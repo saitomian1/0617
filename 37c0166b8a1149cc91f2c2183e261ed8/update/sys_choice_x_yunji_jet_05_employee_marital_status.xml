@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<record_update table="sys_choice">
+  <sys_choice action="INSERT_OR_UPDATE">
+    <dependent_value/>
+    <element>marital_status</element>
+    <hint/>
+    <inactive>false</inactive>
+    <label>已婚</label>
+    <language>en</language>
+    <name>x_yunji_jet_05_employee</name>
+    <sequence/>
+    <synonyms/>
+    <sys_class_name>sys_choice</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 19:12:18</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_effective/>
+    <sys_id>15db6c2ff2d449708ddb613de7637900</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-28 19:12:18</sys_updated_on>
+    <value>已婚</value>
+  </sys_choice>
+  <sys_choice action="INSERT_OR_UPDATE">
+    <dependent_value/>
+    <element>marital_status</element>
+    <hint/>
+    <inactive>false</inactive>
+    <label>未婚</label>
+    <language>en</language>
+    <name>x_yunji_jet_05_employee</name>
+    <sequence/>
+    <synonyms/>
+    <sys_class_name>sys_choice</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 19:12:26</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_effective/>
+    <sys_id>a085c823d0a04eda827c28131082cc6b</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-28 19:12:26</sys_updated_on>
+    <value>未婚</value>
+  </sys_choice>
+</record_update>

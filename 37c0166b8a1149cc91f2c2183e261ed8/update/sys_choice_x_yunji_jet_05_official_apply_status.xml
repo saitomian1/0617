@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<record_update table="sys_choice">
+  <sys_choice action="INSERT_OR_UPDATE">
+    <dependent_value/>
+    <element>status</element>
+    <hint/>
+    <inactive>false</inactive>
+    <label>待发起</label>
+    <language>en</language>
+    <name>x_yunji_jet_05_official_apply</name>
+    <sequence/>
+    <synonyms/>
+    <sys_class_name>sys_choice</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-27 12:15:19</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_effective/>
+    <sys_id>60b89ec4cf24453fa938d360805796a2</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-27 12:15:19</sys_updated_on>
+    <value>待发起</value>
+  </sys_choice>
+  <sys_choice action="INSERT_OR_UPDATE">
+    <dependent_value/>
+    <element>status</element>
+    <hint/>
+    <inactive>false</inactive>
+    <label>审批中</label>
+    <language>en</language>
+    <name>x_yunji_jet_05_official_apply</name>
+    <sequence/>
+    <synonyms/>
+    <sys_class_name>sys_choice</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-27 12:15:31</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_effective/>
+    <sys_id>ee057f983a3e46f792c34719739e0d29</sys_id>
+    <sys_mod_count>3</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-27 12:17:20</sys_updated_on>
+    <value>审批中</value>
+  </sys_choice>
+  <sys_choice action="INSERT_OR_UPDATE">
+    <dependent_value/>
+    <element>status</element>
+    <hint/>
+    <inactive>false</inactive>
+    <label>申请通过</label>
+    <language>en</language>
+    <name>x_yunji_jet_05_official_apply</name>
+    <sequence/>
+    <synonyms/>
+    <sys_class_name>sys_choice</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-27 12:16:53</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_effective/>
+    <sys_id>cf8e078ac4fb423680dd19e6b82c64c9</sys_id>
+    <sys_mod_count>3</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-27 14:00:35</sys_updated_on>
+    <value>申请通过</value>
+  </sys_choice>
+  <sys_choice action="INSERT_OR_UPDATE">
+    <dependent_value/>
+    <element>status</element>
+    <hint/>
+    <inactive>false</inactive>
+    <label>申请拒绝</label>
+    <language>en</language>
+    <name>x_yunji_jet_05_official_apply</name>
+    <sequence/>
+    <synonyms/>
+    <sys_class_name>sys_choice</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-27 12:17:47</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_effective/>
+    <sys_id>7a9eaeb9f6494a5892b2280b228d475c</sys_id>
+    <sys_mod_count>2</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-27 14:00:44</sys_updated_on>
+    <value>申请拒绝</value>
+  </sys_choice>
+</record_update>

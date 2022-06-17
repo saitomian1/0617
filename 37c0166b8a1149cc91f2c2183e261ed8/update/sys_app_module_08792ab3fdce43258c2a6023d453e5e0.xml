@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<record_update table="sys_app_module">
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <active>true</active>
+    <application>966be63549644bfeadc7cf09d6b89248</application>
+    <assessment/>
+    <device_type/>
+    <filter/>
+    <hint>试用期转正申请</hint>
+    <homepage/>
+    <image/>
+    <link_type>NEW</link_type>
+    <map_page/>
+    <mobile_title/>
+    <mobile_view_name>Mobile</mobile_view_name>
+    <name>x_yunji_jet_05_official_apply</name>
+    <order>203.00</order>
+    <override_menu_roles>false</override_menu_roles>
+    <query/>
+    <report/>
+    <roles>386b8be10b974e8fb1abb17704e09e40,7afa59fc7e5549219e647a04603b55cc,6a40753c6ba8420d96f697f532254507,30b52330d1ac4cfeac974149fc2f3312,8d65e6fbca76400697a82d5e6cb8fa78,296c8a8d94ac40a384c704d1e3253adb,3666728a7322475abf74b88e2c39a73a,0bd3536f34c143e08de08e5c8e61cf73,5d2b343cb0b64be2a544dd6ba4f522eb</roles>
+    <sys_class_name>sys_app_module</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-27 11:57:01</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_effective/>
+    <sys_id>08792ab3fdce43258c2a6023d453e5e0</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_name/>
+    <sys_overrides/>
+    <sys_package/>
+    <sys_policy/>
+    <sys_scope>37c0166b8a1149cc91f2c2183e261ed8</sys_scope>
+    <sys_update_name/>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-29 13:28:17</sys_updated_on>
+    <timeline_page/>
+    <title>试用期转正申请</title>
+    <uncancelable>false</uncancelable>
+    <view_name>试用期转正申请</view_name>
+    <window_name>试用期转正申请</window_name>
+  </sys_app_module>
+</record_update>
