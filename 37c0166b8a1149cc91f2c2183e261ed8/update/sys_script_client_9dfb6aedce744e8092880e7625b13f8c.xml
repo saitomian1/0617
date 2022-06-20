@@ -9,7 +9,7 @@
     <global>true</global>
     <isolate_script>false</isolate_script>
     <messages/>
-    <name>offer信息提交审批后，所有信息不可修改</name>
+    <name>offer信息提交审批后，所有信息不可修改1</name>
     <order>100</order>
     <script>var approveStatus = g_form.getValue('approve_status');
 if(approveStatus &amp;&amp; approveStatus !== '待操作'){
@@ -61,7 +61,7 @@ if(approveStatus &amp;&amp; approveStatus !== '待操作'){
 </script>
     <sys_class_name>sys_script_client</sys_class_name>
     <sys_created_by>gukaiming</sys_created_by>
-    <sys_created_on>2022-04-28 14:38:55</sys_created_on>
+    <sys_created_on>2022-06-20 09:56:12</sys_created_on>
     <sys_domain>global</sys_domain>
     <sys_domain_path>/</sys_domain_path>
     <sys_effective/>
@@ -74,7 +74,7 @@ if(approveStatus &amp;&amp; approveStatus !== '待操作'){
     <sys_scope>37c0166b8a1149cc91f2c2183e261ed8</sys_scope>
     <sys_update_name/>
     <sys_updated_by>gukaiming</sys_updated_by>
-    <sys_updated_on>2022-04-29 00:14:06</sys_updated_on>
+    <sys_updated_on>2022-06-20 16:02:18</sys_updated_on>
     <table>x_yunji_jet_05_offer_info</table>
     <type>onLoad</type>
     <ui_type>0</ui_type>

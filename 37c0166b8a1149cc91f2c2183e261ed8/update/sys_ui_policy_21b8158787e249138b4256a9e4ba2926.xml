@@ -47,10 +47,10 @@
 
 }</script_true>
     <set_values/>
-    <short_description>离职校验</short_description>
+    <short_description>离职校验1</short_description>
     <sys_class_name>sys_ui_policy</sys_class_name>
     <sys_created_by>gukaiming</sys_created_by>
-    <sys_created_on>2022-04-27 18:21:19</sys_created_on>
+    <sys_created_on>2022-06-20 09:56:03</sys_created_on>
     <sys_domain>global</sys_domain>
     <sys_domain_path>/</sys_domain_path>
     <sys_effective/>
@@ -63,7 +63,7 @@
     <sys_scope>37c0166b8a1149cc91f2c2183e261ed8</sys_scope>
     <sys_update_name/>
     <sys_updated_by>gukaiming</sys_updated_by>
-    <sys_updated_on>2022-04-28 09:16:46</sys_updated_on>
+    <sys_updated_on>2022-06-20 16:02:29</sys_updated_on>
     <table>x_yunji_jet_05_dimissions</table>
     <ui_type>0</ui_type>
     <view/>
