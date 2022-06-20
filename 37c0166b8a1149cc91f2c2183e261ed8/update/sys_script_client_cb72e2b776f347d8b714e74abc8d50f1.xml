@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<record_update table="sys_script_client">
+  <sys_script_client action="INSERT_OR_UPDATE">
+    <active>true</active>
+    <applies_extended>false</applies_extended>
+    <condition/>
+    <description/>
+    <field/>
+    <global>true</global>
+    <isolate_script>false</isolate_script>
+    <messages/>
+    <name>离职根据用户ID时查询员工信息</name>
+    <order>100</order>
+    <script>//获取?后面的参数
+var sys_id = GetQueryString('sys_id');
+
+if(!sys_id){
+  //查询用户信息
+	var ga = new GlideAjax('UserInfo');
+	ga.addParam('sysparm_name', 'getUser');
+	ga.getJson(response =&gt; {
+	  var { result } = response.data; 
+    var employee = new GlideRecord('x_yunji_jet_05_employee');
+  	employee.addQuery('user_id',result.id);
+  	employee.query((e,res)=&gt;{
+  	  if( res &amp;&amp; res.data &amp;&amp; res.data.records &amp;&amp; res.data.records.length){
+  	    var record = res.data.records[0].dataMap;
+      	var employeeId = record.sys_id;
+      	var dimission = new GlideRecord('x_yunji_jet_05_dimissions');
+  			dimission.addQuery('employee_id',employeeId);
+  			dimission.query((de,dres)=&gt;{
+  			  if(dres &amp;&amp; dres.data &amp;&amp; dres.data.records &amp;&amp; dres.data.records.length){
+  			    var drecord = dres.data.records[0].dataMap;
+	  		  	url = 'x_yunji_jet_05_dimissions.do&amp;sys_id=' + drecord.sys_id;
+	  		  	open(url);
+  			  }
+  			});
+  	  }
+    })   
+	});
+}
+
+
+  //获取url里面的参数
+function GetQueryString(name) { 
+    var reg = new RegExp("(^|&amp;)" + name + "=([^&amp;]*)(&amp;|$)", "i"); 
+    //获取url中"?"符后的字符串并正则匹配
+    var r = window.location.search.substr(1).match(reg);
+    var context = ""; 
+    if (r != null){context = r[2];}
+    reg = null; 
+    r = null; 
+    return context == null || context == "" || context == "undefined" ? "" : context; 
+}
+
+//获取?后面的参数
+if(!g_form.getValue('employee_id')){
+	var ga = new GlideAjax('UserInfo');
+	ga.addParam('sysparm_name', 'getUser');
+	ga.getJson(response =&gt; {
+	  var { result } = response.data; 
+	  console.log(result);
+//查询用户信息
+    var employee = new GlideRecord('x_yunji_jet_05_employee');
+  	employee.addQuery('user_id',result.id);
+  	employee.query((e,res)=&gt;{
+  	  if( res.data.records.lengh &lt;= 0){
+  	    return;
+  	  }
+  	  //debugger;
+  	  var record = res.data.records[0].dataMap;
+      console.log('record', record);
+  	  g_form.setValue("number",record.number);
+  	  g_form.setValue("name",record.name);
+  	  g_form.setValue("card_no",record.cert_number);
+  	  g_form.setValue("joined_date",record.joined_date);
+  	  g_form.setValue("employee_id",record.sys_id);
+  	  g_form.setValue("direct_supervision_id",record.direct_supervision_id);
+  	  var date = getCurrentDate();
+  	  g_form.setValue("dimissions_handle_date",date);
+  	});
+	});
+}
+  //获取url里面的参数
+function GetQueryString(name) { 
+    var reg = new RegExp("(^|&amp;)" + name + "=([^&amp;]*)(&amp;|$)", "i"); 
+    //获取url中"?"符后的字符串并正则匹配
+    var r = window.location.search.substr(1).match(reg);
+    var context = ""; 
+    if (r != null){context = r[2];}
+    reg = null; 
+    r = null; 
+    return context == null || context == "" || context == "undefined" ? "" : context; 
+}
+
+//当前时间
+function getCurrentDate() {
+    var date = new Date();
+    var year = date.getFullYear() //返回指定日期的年份
+    var month = repair(date.getMonth() + 1);//月
+    var day = repair(date.getDate());//日
+    //var hour = repair(date.getHours());//时
+    //var minute = repair(date.getMinutes());//分
+    //var second = repair(date.getSeconds());//秒
+    //当前时间 
+    //var curTime = year + "-" + month + "-" + day+ " " + hour + ":" + minute + ":" + second;
+    var curTime = year + "-" + month + "-" + day;
+    return curTime;
+}
+
+function repair(i){
+    if (i &gt;= 0 &amp;&amp; i &lt;= 9) {
+        return "0" + i;
+    } else {
+        return i;
+    }
+}</script>
+    <sys_class_name>sys_script_client</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-27 15:23:24</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_effective/>
+    <sys_id>cb72e2b776f347d8b714e74abc8d50f1</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_name/>
+    <sys_overrides/>
+    <sys_package/>
+    <sys_policy/>
+    <sys_scope>37c0166b8a1149cc91f2c2183e261ed8</sys_scope>
+    <sys_update_name/>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-29 01:40:25</sys_updated_on>
+    <table>x_yunji_jet_05_dimissions</table>
+    <type>onLoad</type>
+    <ui_type>0</ui_type>
+    <view/>
+  </sys_script_client>
+</record_update>

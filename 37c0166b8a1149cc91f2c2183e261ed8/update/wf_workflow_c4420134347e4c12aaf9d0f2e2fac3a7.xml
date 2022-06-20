@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<record_update table="wf_workflow">
+  <wf_workflow action="INSERT_OR_UPDATE">
+    <access>public</access>
+    <description>入职-任务(信息核实)</description>
+    <name>入职-任务(其他)</name>
+    <preview/>
+    <sys_class_name>wf_workflow</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 14:30:49</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_effective/>
+    <sys_id>c4420134347e4c12aaf9d0f2e2fac3a7</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_name/>
+    <sys_overrides/>
+    <sys_package/>
+    <sys_policy/>
+    <sys_scope>37c0166b8a1149cc91f2c2183e261ed8</sys_scope>
+    <sys_update_name/>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-28 14:30:49</sys_updated_on>
+    <table>incident_task</table>
+    <template>false</template>
+  </wf_workflow>
+  <wf_workflow_version action="INSERT_OR_UPDATE">
+    <act_def_id>ed3a5ace-c6fe-11ec-8a0b-0242ac120005</act_def_id>
+    <active>true</active>
+    <activity_stages/>
+    <after_business_rules/>
+    <bpmn>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://activiti.org/bpmn" id="Definitions_1"&gt;
+  &lt;process id="_da1d4e82-1be4-43e8-b7bd-173d3d70566a" isExecutable="true"&gt;
+    &lt;startEvent id="_07b611c091a04530a202051b8919d1e3" name="开始"&gt;
+      &lt;bounds key="_7c95f435-3d65-4f4c-b75b-051729a51b13" sys_id="a86839ae45ec40a6ac26c425be1c8367" name="开始" displayName="开始" category="Utilities" image="" parent="Utilities" activityCoreType="startEvent" activityType="Begin" toPortId="_1c273698-6246-4372-9ebf-83868864d3e9" actType="startEvent" bizType="startEvent" loc="-1087.207581125895 -89.56597272237143" workflowInstanceId="" workflow_displayValue="" workflow_value="" stageName=""/&gt;
+      &lt;conditionList&gt;
+        &lt;condition id="aee5bc828d6b459991082c23215e956b" name="总是" fromPortId="_03b663b0-84a5-4702-90ed-ecb64a3931bd"/&gt;
+      &lt;/conditionList&gt;
+    &lt;/startEvent&gt;
+    &lt;endEvent id="_80156a02706545449defd92fd38466f4" name="结束"&gt;
+      &lt;bounds key="_193c0a1e-5b3d-4733-85a5-812c16c7160f" sys_id="c0a6be81346e4fac9895b8b5b8472b0a" name="结束" displayName="结束" category="Utilities" image="" parent="Utilities" activityCoreType="endEvent" activityType="End" toPortId="_cec80628-2a1c-49d9-b954-b388ab779dab" actType="endEvent" bizType="endEvent" loc="-166.41505251567128 603.1813575263315" workflowInstanceId="" workflow_displayValue="" workflow_value="" stageName=""/&gt;
+      &lt;conditionList/&gt;
+    &lt;/endEvent&gt;
+    &lt;receiveTask id="_6b734a24f1fd43908b2da68e6f2c2022" name="Create Task"&gt;
+      &lt;bounds key="_ea028e2e-5cbc-409c-9b6e-e2205983f77e" sys_id="e1f0d42aedbc465dbec7f087ce177ceb" name="Create Task" displayName="入职-确认座位、师兄" category="Tasks" image="http://cloudboot.idcos.com:39999/devcdn/a14fe834ef67ad62d1405a0f525c5e4b.png" parent="Tasks" activityCoreType="receiveTask" activityType="Create Task" toPortId="_b2bcca7f-463f-4438-9bae-40f2063920a8" actType="Create Task" bizType="Create Task" loc="-862.9999999288634 66.99999899915474" workflowInstanceId="" workflow_displayValue="" workflow_value="" stageName=""/&gt;
+      &lt;conditionList&gt;
+        &lt;condition id="6766b401771b486d900ec1ecbd2a71b9" name="总是" fromPortId="_6766b401771b486d900ec1ecbd2a71b9"/&gt;
+      &lt;/conditionList&gt;
+    &lt;/receiveTask&gt;
+    &lt;receiveTask id="_c6e3e38e9bf94eca9d8fe3d6ba342be4" name="Create Task"&gt;
+      &lt;bounds key="_ad949466-f958-4f13-8976-4ebdc35acba8" sys_id="e1f0d42aedbc465dbec7f087ce177ceb" name="Create Task" displayName="入职-办理入职手续/劳动合同签署" category="Tasks" image="http://cloudboot.idcos.com:39999/devcdn/a14fe834ef67ad62d1405a0f525c5e4b.png" parent="Tasks" activityCoreType="receiveTask" activityType="Create Task" toPortId="_b2bcca7f-463f-4438-9bae-40f2063920a8" actType="Create Task" bizType="Create Task" loc="-643.4150525156713 235.99999899915474" workflowInstanceId="" workflow_displayValue="" workflow_value="" stageName=""/&gt;
+      &lt;conditionList&gt;
+        &lt;condition id="a72fa61e6461429a880bcb83910ace17" name="总是" fromPortId="_a72fa61e6461429a880bcb83910ace17"/&gt;
+      &lt;/conditionList&gt;
+    &lt;/receiveTask&gt;
+    &lt;receiveTask id="_6264ac4e865a483abc077c4f42021381" name="Create Task"&gt;
+      &lt;bounds key="_aabbf017-f951-4be6-a70e-a37d471a5497" sys_id="e1f0d42aedbc465dbec7f087ce177ceb" name="Create Task" displayName="入职-办公用机/指纹/邮箱/社保对接" category="Tasks" image="http://cloudboot.idcos.com:39999/devcdn/a14fe834ef67ad62d1405a0f525c5e4b.png" parent="Tasks" activityCoreType="receiveTask" activityType="Create Task" toPortId="_b2bcca7f-463f-4438-9bae-40f2063920a8" actType="Create Task" bizType="Create Task" loc="-395.4150525156713 406.15704112008143" workflowInstanceId="" workflow_displayValue="" workflow_value="" stageName=""/&gt;
+      &lt;conditionList&gt;
+        &lt;condition id="31b2912c861f4991a27a6951a2259e69" name="总是" fromPortId="_31b2912c861f4991a27a6951a2259e69"/&gt;
+      &lt;/conditionList&gt;
+    &lt;/receiveTask&gt;
+    &lt;sequenceFlow id="_aee5bc828d6b459991082c23215e956b-_6b734a24f1fd43908b2da68e6f2c2022" sourceRef="_07b611c091a04530a202051b8919d1e3" targetRef="_6b734a24f1fd43908b2da68e6f2c2022"&gt;
+      &lt;conditionExpression/&gt;
+      &lt;waypoint from="_7c95f435-3d65-4f4c-b75b-051729a51b13" to="_ea028e2e-5cbc-409c-9b6e-e2205983f77e" fromPort="_03b663b0-84a5-4702-90ed-ecb64a3931bd" toPort="_b2bcca7f-463f-4438-9bae-40f2063920a8" points="List()#4666" id="_aee5bc828d6b459991082c23215e956b-_6b734a24f1fd43908b2da68e6f2c2022" state=""/&gt;
+    &lt;/sequenceFlow&gt;
+    &lt;sequenceFlow id="_6766b401771b486d900ec1ecbd2a71b9-_c6e3e38e9bf94eca9d8fe3d6ba342be4" sourceRef="_6b734a24f1fd43908b2da68e6f2c2022" targetRef="_c6e3e38e9bf94eca9d8fe3d6ba342be4"&gt;
+      &lt;conditionExpression&gt;${conditionResult.contains('6766b401771b486d900ec1ecbd2a71b9')}&lt;/conditionExpression&gt;
+      &lt;waypoint from="_ea028e2e-5cbc-409c-9b6e-e2205983f77e" to="_ad949466-f958-4f13-8976-4ebdc35acba8" fromPort="_6766b401771b486d900ec1ecbd2a71b9" toPort="_b2bcca7f-463f-4438-9bae-40f2063920a8" points="List()#4673" id="_6766b401771b486d900ec1ecbd2a71b9-_c6e3e38e9bf94eca9d8fe3d6ba342be4" state=""/&gt;
+    &lt;/sequenceFlow&gt;
+    &lt;sequenceFlow id="_a72fa61e6461429a880bcb83910ace17-_6264ac4e865a483abc077c4f42021381" sourceRef="_c6e3e38e9bf94eca9d8fe3d6ba342be4" targetRef="_6264ac4e865a483abc077c4f42021381"&gt;
+      &lt;conditionExpression&gt;${conditionResult.contains('a72fa61e6461429a880bcb83910ace17')}&lt;/conditionExpression&gt;
+      &lt;waypoint from="_ad949466-f958-4f13-8976-4ebdc35acba8" to="_aabbf017-f951-4be6-a70e-a37d471a5497" fromPort="_a72fa61e6461429a880bcb83910ace17" toPort="_b2bcca7f-463f-4438-9bae-40f2063920a8" points="List()#4679" id="_a72fa61e6461429a880bcb83910ace17-_6264ac4e865a483abc077c4f42021381" state=""/&gt;
+    &lt;/sequenceFlow&gt;
+    &lt;sequenceFlow id="_31b2912c861f4991a27a6951a2259e69-_80156a02706545449defd92fd38466f4" sourceRef="_6264ac4e865a483abc077c4f42021381" targetRef="_80156a02706545449defd92fd38466f4"&gt;
+      &lt;conditionExpression&gt;${conditionResult.contains('31b2912c861f4991a27a6951a2259e69')}&lt;/conditionExpression&gt;
+      &lt;waypoint from="_aabbf017-f951-4be6-a70e-a37d471a5497" to="_193c0a1e-5b3d-4733-85a5-812c16c7160f" fromPort="_31b2912c861f4991a27a6951a2259e69" toPort="_cec80628-2a1c-49d9-b954-b388ab779dab" points="List()#4685" id="_31b2912c861f4991a27a6951a2259e69-_80156a02706545449defd92fd38466f4" state=""/&gt;
+    &lt;/sequenceFlow&gt;
+  &lt;/process&gt;
+&lt;/definitions&gt;</bpmn>
+    <checked_out/>
+    <checked_out_by/>
+    <column_renderer/>
+    <condition/>
+    <condition_type/>
+    <description>入职-任务(信息核实)</description>
+    <expected_sequences/>
+    <expected_time/>
+    <expected_time_type/>
+    <full_sequences/>
+    <journal/>
+    <max_activity_count>100</max_activity_count>
+    <name>入职-任务(其他)</name>
+    <not_cacheable>false</not_cacheable>
+    <on_cancel>// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.</on_cancel>
+    <order>100</order>
+    <pin_type>set_by_activity</pin_type>
+    <published>true</published>
+    <relative_duration/>
+    <requires_ert>true</requires_ert>
+    <run_multiple/>
+    <schedule/>
+    <stage_field/>
+    <stage_order>computed</stage_order>
+    <start/>
+    <sys_class_name>wf_workflow_version</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:56</sys_created_on>
+    <sys_effective/>
+    <sys_id>68cf651388ba4fef9a30e986add73d23</sys_id>
+    <sys_mod_count>4</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-28 22:24:35</sys_updated_on>
+    <table>incident_task</table>
+    <timezone/>
+    <validated/>
+    <workflow>c4420134347e4c12aaf9d0f2e2fac3a7</workflow>
+  </wf_workflow_version>
+  <wf_activity action="INSERT_OR_UPDATE">
+    <activity_definition>c0a6be81346e4fac9895b8b5b8472b0a</activity_definition>
+    <activity_definition_updated>false</activity_definition_updated>
+    <databus_lookup_id/>
+    <height/>
+    <input/>
+    <is_parent>false</is_parent>
+    <name>结束</name>
+    <new_activity_definition/>
+    <notes/>
+    <out_of_date>false</out_of_date>
+    <parent/>
+    <pinned>false</pinned>
+    <pinned_version/>
+    <stage/>
+    <sys_class_name>wf_activity</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>80156a02706545449defd92fd38466f4</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <timeout/>
+    <vars/>
+    <width>80</width>
+    <workflow_version>68cf651388ba4fef9a30e986add73d23</workflow_version>
+    <x>400</x>
+    <y>150</y>
+  </wf_activity>
+  <wf_activity action="INSERT_OR_UPDATE">
+    <activity_definition>a86839ae45ec40a6ac26c425be1c8367</activity_definition>
+    <activity_definition_updated>false</activity_definition_updated>
+    <databus_lookup_id/>
+    <height/>
+    <input/>
+    <is_parent>false</is_parent>
+    <name>开始</name>
+    <new_activity_definition/>
+    <notes/>
+    <out_of_date>false</out_of_date>
+    <parent/>
+    <pinned>false</pinned>
+    <pinned_version/>
+    <stage/>
+    <sys_class_name>wf_activity</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>07b611c091a04530a202051b8919d1e3</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <timeout/>
+    <vars/>
+    <width>80</width>
+    <workflow_version>68cf651388ba4fef9a30e986add73d23</workflow_version>
+    <x>20</x>
+    <y>20</y>
+  </wf_activity>
+  <wf_activity action="INSERT_OR_UPDATE">
+    <activity_definition>e1f0d42aedbc465dbec7f087ce177ceb</activity_definition>
+    <activity_definition_updated>false</activity_definition_updated>
+    <databus_lookup_id/>
+    <height/>
+    <input/>
+    <is_parent>false</is_parent>
+    <name>入职-确认座位、师兄</name>
+    <new_activity_definition/>
+    <notes/>
+    <out_of_date>false</out_of_date>
+    <parent/>
+    <pinned>false</pinned>
+    <pinned_version/>
+    <stage/>
+    <sys_class_name>wf_activity</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>6b734a24f1fd43908b2da68e6f2c2022</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <timeout/>
+    <vars/>
+    <width/>
+    <workflow_version>68cf651388ba4fef9a30e986add73d23</workflow_version>
+    <x/>
+    <y/>
+  </wf_activity>
+  <wf_activity action="INSERT_OR_UPDATE">
+    <activity_definition>e1f0d42aedbc465dbec7f087ce177ceb</activity_definition>
+    <activity_definition_updated>false</activity_definition_updated>
+    <databus_lookup_id/>
+    <height/>
+    <input/>
+    <is_parent>false</is_parent>
+    <name>入职-办公用机/指纹/邮箱/社保对接</name>
+    <new_activity_definition/>
+    <notes/>
+    <out_of_date>false</out_of_date>
+    <parent/>
+    <pinned>false</pinned>
+    <pinned_version/>
+    <stage/>
+    <sys_class_name>wf_activity</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>6264ac4e865a483abc077c4f42021381</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <timeout/>
+    <vars/>
+    <width/>
+    <workflow_version>68cf651388ba4fef9a30e986add73d23</workflow_version>
+    <x/>
+    <y/>
+  </wf_activity>
+  <wf_activity action="INSERT_OR_UPDATE">
+    <activity_definition>e1f0d42aedbc465dbec7f087ce177ceb</activity_definition>
+    <activity_definition_updated>false</activity_definition_updated>
+    <databus_lookup_id/>
+    <height/>
+    <input/>
+    <is_parent>false</is_parent>
+    <name>入职-办理入职手续/劳动合同签署</name>
+    <new_activity_definition/>
+    <notes/>
+    <out_of_date>false</out_of_date>
+    <parent/>
+    <pinned>false</pinned>
+    <pinned_version/>
+    <stage/>
+    <sys_class_name>wf_activity</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>c6e3e38e9bf94eca9d8fe3d6ba342be4</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <timeout/>
+    <vars/>
+    <width/>
+    <workflow_version>68cf651388ba4fef9a30e986add73d23</workflow_version>
+    <x/>
+    <y/>
+  </wf_activity>
+  <wf_condition action="INSERT_OR_UPDATE">
+    <activity>07b611c091a04530a202051b8919d1e3</activity>
+    <condition>true</condition>
+    <condition_default/>
+    <condition_type>standard</condition_type>
+    <else_flag>false</else_flag>
+    <error>false</error>
+    <event>false</event>
+    <event_name/>
+    <is_positive>false</is_positive>
+    <name>开始</name>
+    <order>1</order>
+    <short_description/>
+    <skip_during_generate>false</skip_during_generate>
+    <sys_class_name>wf_condition</sys_class_name>
+    <sys_created_by>gukaiming</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>aee5bc828d6b459991082c23215e956b</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+  </wf_condition>
+  <wf_condition action="INSERT_OR_UPDATE">
+    <activity>6b734a24f1fd43908b2da68e6f2c2022</activity>
+    <condition>true</condition>
+    <condition_default>c79b057696e04317918a0371b5a4b59c</condition_default>
+    <condition_type>standard</condition_type>
+    <else_flag>false</else_flag>
+    <error>false</error>
+    <event>false</event>
+    <event_name/>
+    <is_positive>false</is_positive>
+    <name>总是</name>
+    <order>1</order>
+    <short_description/>
+    <skip_during_generate>false</skip_during_generate>
+    <sys_class_name>wf_condition</sys_class_name>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>6766b401771b486d900ec1ecbd2a71b9</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+  </wf_condition>
+  <wf_condition action="INSERT_OR_UPDATE">
+    <activity>c6e3e38e9bf94eca9d8fe3d6ba342be4</activity>
+    <condition>true</condition>
+    <condition_default>c79b057696e04317918a0371b5a4b59c</condition_default>
+    <condition_type>standard</condition_type>
+    <else_flag>false</else_flag>
+    <error>false</error>
+    <event>false</event>
+    <event_name/>
+    <is_positive>false</is_positive>
+    <name>总是</name>
+    <order>1</order>
+    <short_description/>
+    <skip_during_generate>false</skip_during_generate>
+    <sys_class_name>wf_condition</sys_class_name>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>a72fa61e6461429a880bcb83910ace17</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+  </wf_condition>
+  <wf_condition action="INSERT_OR_UPDATE">
+    <activity>6264ac4e865a483abc077c4f42021381</activity>
+    <condition>true</condition>
+    <condition_default>c79b057696e04317918a0371b5a4b59c</condition_default>
+    <condition_type>standard</condition_type>
+    <else_flag>false</else_flag>
+    <error>false</error>
+    <event>false</event>
+    <event_name/>
+    <is_positive>false</is_positive>
+    <name>总是</name>
+    <order>1</order>
+    <short_description/>
+    <skip_during_generate>false</skip_during_generate>
+    <sys_class_name>wf_condition</sys_class_name>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>31b2912c861f4991a27a6951a2259e69</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+  </wf_condition>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>7b0ee694e8d542dc855f3b2f87950b62</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value>Fields</value>
+    <variable>beb2bc4e8f6a45e1ab27184f626184cd</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>e41ee181c89b43a2a0b3b951ff3f6d01</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value/>
+    <variable>b9ba622e2be24ab09194d3996c104ebc</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>fd98f29eb77a497db7238420cdd08370</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value>// Set 'answer' to the number of seconds this timer should wait answer = 0;</value>
+    <variable>df05deec5d4343cc97e0f87870ec9595</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>30a1c09778484372a68da1258b994d7c</sys_id>
+    <sys_mod_count>2</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:04:17</sys_updated_on>
+    <value>5f6cf27a54344e658a0b8a0ced585c82</value>
+    <variable>6dd14acd763d41a589518ccf9e38ed1d</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>25af3a627ca340bab5754838c1111735</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value>// Set 'answer' to the number of seconds this timer should wait answer = 0;</value>
+    <variable>df05deec5d4343cc97e0f87870ec9595</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>15b95d17c5544f838af5325b35ecb142</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value/>
+    <variable>2cb3b8724813400a824424a936e81acb</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>cdd0ad8d4b3f4eeba429e65e8c3294ad</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value/>
+    <variable>4484275b974d43a7a6858825ba5a3d3d</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>1628ddfa26e64ba580ee9f85c8a3768b</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value/>
+    <variable>40e4ebea4686440783c7db1866534842</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>0a8786f34bf34644810b23cdc2c68a6d</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value/>
+    <variable>a9c1d4665fd941b0b29105408a61027f</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>4d857d5fe2264c959f3f5894630b2988</sys_id>
+    <sys_mod_count>2</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:04:17</sys_updated_on>
+    <value/>
+    <variable>8ab4de6c9b1e437f8a1df53d98784b3e</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>1873de121ab24b8f8dfa42c07b432fcf</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value/>
+    <variable>2cb3b8724813400a824424a936e81acb</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:57</sys_created_on>
+    <sys_effective/>
+    <sys_id>f74d752b96124a81b14da0a0f1a715b1</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:57</sys_updated_on>
+    <value>办公用机/指纹/邮箱/社保对接</value>
+    <variable>384d852f87c04ceeb6d77c51d5d47bfb</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>4a10ebb5bc80493f97dc80cd155e07bb</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>4</value>
+    <variable>4dd3e8556be94050bf905a00efd7f472</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>87a50bfb057f41dd9e35416735e63e62</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>确认座位、师兄</value>
+    <variable>c0a921d25bee4148aff9ed062329de16</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>331a3f537b85467492e882e9677af1d4</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>false</value>
+    <variable>1480728bfa2240058b9de0e39d1b2b76</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>19ea837e89a44b18a9a2a3da6048d7e1</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>61a33da2e1c84fe39d620b45759da543</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>207ab7b0cbc142ab8045bb6783203bc1</sys_id>
+    <sys_mod_count>2</sys_mod_count>
+    <sys_updated_by>gukaiming</sys_updated_by>
+    <sys_updated_on>2022-04-28 22:04:36</sys_updated_on>
+    <value>3aa7b9530472460686b17d2076286aeb</value>
+    <variable>6dd14acd763d41a589518ccf9e38ed1d</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>6cd1958ef7954523892f935a31f3c128</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>// Set 'answer' to the number of seconds this timer should wait answer = 0;</value>
+    <variable>df05deec5d4343cc97e0f87870ec9595</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>d943af7e8a50445f8ca7d8599cd802e9</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>// Set values for the task in this script.  Use the variable 'task' when setting additional values. // Note: This script is run after the task values are set using the Fields, Template or Values you have specified. // // For example: //     task.short_description = current.short_description;</value>
+    <variable>e2e251faabf44cecb3d3f18873b7dabb</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>146d28b7b3624bc781a944d5b1a5b80b</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>false</value>
+    <variable>45fd82db82c34a0889c120bd9ee99ee5</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>6362ac4aa4b246039f145310b378e799</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>task</value>
+    <variable>65601b4f54fc4a80bd7bb298bf9f0f33</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>c0dea4d96c17491d878f00260cc501a4</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>a6425bbcf1ce403890b323117afb1713</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>1c1b1609113f4b73896d16dd65d107da</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>4484275b974d43a7a6858825ba5a3d3d</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>2b9ce84e3d31436baef73b56fd0efff5</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>2cb3b8724813400a824424a936e81acb</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>2c11586bac0444899f82ef14f2e192c7</sys_id>
+    <sys_mod_count>2</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:04:58</sys_updated_on>
+    <value/>
+    <variable>8ab4de6c9b1e437f8a1df53d98784b3e</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>0257c9fa237a45ada36b474e13140651</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>31da791fb355470aaa1de061010df3d8</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>4646731b7e4840ab8d5eb8f9e7b3c356</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>e060cd3a786a4135a5285e191ed18787</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>1d9acde564d64035b8ab3f7ecd1e1d75</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>1b018d7cc1494f0a8853fb81a5155252</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>501da6609bd842629b98b7c71374463d</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>21bff997d9894389a10e20de691ff312</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>f9ebdd84eb3d4fcbb559cd28fc0e2ee8</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>入职-办理入职手续/劳动合同签署</value>
+    <variable>c0a921d25bee4148aff9ed062329de16</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>bf69d8f68ecf44f1b1b3dcc0af99bd79</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>0ac64e08aae34af884d4ad738add10ec</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>537e2ce10799494c800e8e99281cb04d</sys_id>
+    <sys_mod_count>2</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:04:58</sys_updated_on>
+    <value>1b8bec9d44824e22a482a451df1af8b6</value>
+    <variable>6dd14acd763d41a589518ccf9e38ed1d</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6b734a24f1fd43908b2da68e6f2c2022</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>1afd92442bbb43f4aed8165b34d868d0</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>确认座位、师兄</value>
+    <variable>384d852f87c04ceeb6d77c51d5d47bfb</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>891e7238ce9a4175b0193c67b3335cdb</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>21bff997d9894389a10e20de691ff312</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>a1a06d3ddb15414caab75c903d8287b0</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>办公用机/指纹/邮箱/社保对接</value>
+    <variable>c0a921d25bee4148aff9ed062329de16</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>513f654a55cc44a580c124808cb7f830</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>a9c1d4665fd941b0b29105408a61027f</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>23e37588741c4a37a02b5a7827e5837d</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>入职-办理入职手续/劳动合同签署</value>
+    <variable>384d852f87c04ceeb6d77c51d5d47bfb</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>55189323d0894b0eac3d5d4a04e635cb</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>task</value>
+    <variable>65601b4f54fc4a80bd7bb298bf9f0f33</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>58b4bbd6b761448ebd98a6a1054504d1</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>31da791fb355470aaa1de061010df3d8</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>9e82d5ab62914e179576ec2b998defda</sys_id>
+    <sys_mod_count>2</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:04:36</sys_updated_on>
+    <value/>
+    <variable>8ab4de6c9b1e437f8a1df53d98784b3e</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>b7ec671934204cc0bc03b4a7b504ded1</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>1b018d7cc1494f0a8853fb81a5155252</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>0d201f2ab1b040dba992361e1a13b819</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>false</value>
+    <variable>45fd82db82c34a0889c120bd9ee99ee5</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>77eee0c034c64d2c97e89c1d83c486c0</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>0ac64e08aae34af884d4ad738add10ec</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>46e7876633d64d09bc9279b22ec90a49</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>Fields</value>
+    <variable>beb2bc4e8f6a45e1ab27184f626184cd</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>2620b236131a46a9ae5afbbc05907343</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>4</value>
+    <variable>4dd3e8556be94050bf905a00efd7f472</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>2b15d2b1280e48768179a1434af7b4be</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>false</value>
+    <variable>45fd82db82c34a0889c120bd9ee99ee5</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>10c8d79fbb2d48bdac9cbbe1cd4a71c2</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>a6425bbcf1ce403890b323117afb1713</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>1272f6edf4644a46aaab31a3a1994598</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>1b018d7cc1494f0a8853fb81a5155252</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>0343c3512d9340299030e5b5a73df854</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>b9ba622e2be24ab09194d3996c104ebc</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>9c5cb7f34d4e42ec856fcac8c95f8c35</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>Fields</value>
+    <variable>beb2bc4e8f6a45e1ab27184f626184cd</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>1766faaacfd2441db1fdc54b0942cef6</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>task</value>
+    <variable>65601b4f54fc4a80bd7bb298bf9f0f33</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>12724e8252304972ab4f7d60449fcb8f</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>61a33da2e1c84fe39d620b45759da543</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>97dc3e5969d5456c9f422032894b4f2a</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>31da791fb355470aaa1de061010df3d8</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>458dd48005414ad3b439ef3af0accec0</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>61a33da2e1c84fe39d620b45759da543</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>f4b73edec1d24d3683af0b96454e72df</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value/>
+    <variable>e060cd3a786a4135a5285e191ed18787</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:58</sys_created_on>
+    <sys_effective/>
+    <sys_id>36be8da0a9ba4d88a88af2a4aaffe99b</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:58</sys_updated_on>
+    <value>// Set values for the task in this script.  Use the variable 'task' when setting additional values. // Note: This script is run after the task values are set using the Fields, Template or Values you have specified. // // For example: //     task.short_description = current.short_description;</value>
+    <variable>e2e251faabf44cecb3d3f18873b7dabb</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>af6596fbee694944a4706d58be9583fe</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value/>
+    <variable>a6425bbcf1ce403890b323117afb1713</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>77d68237e97247b88667e1192b21b64f</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value/>
+    <variable>a9c1d4665fd941b0b29105408a61027f</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>8d776e4019b54bb89c5bbc91df95ddef</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value>false</value>
+    <variable>1480728bfa2240058b9de0e39d1b2b76</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>c6e3e38e9bf94eca9d8fe3d6ba342be4</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>76f1147aebc64bbc8ac981b778118fb0</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value/>
+    <variable>40e4ebea4686440783c7db1866534842</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>208b943d07d1427e890628d8a1f113ff</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value/>
+    <variable>40e4ebea4686440783c7db1866534842</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>dc1cc0f2b140474cad021034c0f737f1</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value/>
+    <variable>21bff997d9894389a10e20de691ff312</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>bd2a4c8099e649d5bfc1ad762fa18a44</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value>// Set values for the task in this script.  Use the variable 'task' when setting additional values. // Note: This script is run after the task values are set using the Fields, Template or Values you have specified. // // For example: //     task.short_description = current.short_description;</value>
+    <variable>e2e251faabf44cecb3d3f18873b7dabb</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>fff2c34baf7644949a908dbb90cc8f89</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value>false</value>
+    <variable>1480728bfa2240058b9de0e39d1b2b76</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>7eb3756bf4e94cf2b9982b715e93a71e</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value/>
+    <variable>0ac64e08aae34af884d4ad738add10ec</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>f1e5a3ac399b4eb4a53900619cc35923</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value/>
+    <variable>4484275b974d43a7a6858825ba5a3d3d</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>9dec616705db4297b1f3f7e7932d1bb2</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value/>
+    <variable>e060cd3a786a4135a5285e191ed18787</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>352a88ed129443679dbd8dab165669a5</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value/>
+    <variable>b9ba622e2be24ab09194d3996c104ebc</variable>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <document>wf_activity</document>
+    <document_key>6264ac4e865a483abc077c4f42021381</document_key>
+    <order/>
+    <sys_class_name>sys_variable_value</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on>2022-04-28 22:03:59</sys_created_on>
+    <sys_effective/>
+    <sys_id>91be74f6c13c48b9a2e6a951d3a48d14</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_updated_by/>
+    <sys_updated_on>2022-04-28 22:03:59</sys_updated_on>
+    <value>4</value>
+    <variable>4dd3e8556be94050bf905a00efd7f472</variable>
+  </sys_variable_value>
+  <wf_workflow_version action="UPDATE_MULTIPLE" query="workflow=c4420134347e4c12aaf9d0f2e2fac3a7^sys_id!=68cf651388ba4fef9a30e986add73d23">
+    <published>false</published>
+  </wf_workflow_version>
+</record_update>
